@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>K.V.A.S</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div id="username">Hello, {{ session.username }}</div>
+                <ul class="nav-links">
+                    <li><div>On main</div></li>
+                    <li><a href="{{ url_for('pages_blueprint.core_blueprint.logout')}}">Logout</a></li>
+                    <li><a href="{{ url_for('pages_blueprint.core_blueprint.render_friends_page')}}">Friends</a></li>
+                    <li><a href="{{ url_for('pages_blueprint.core_blueprint.render_chats_page')}}">Chats</a></li>
+                    <li><a href="{{ url_for('pages_blueprint.core_blueprint.render_forum_main_page')}}">Forum</a></li>
+                </ul>
+        </nav>
+    </header>
+    
+<!--    <div class="navigation-panel", id="navigation-left">
+        <picture id="inline">
+            <img src="img/avatar.jpg" alt="avatar" width="50px", height="50px">
+        </picture>
+        <div class="text" id="inline">{{ session.username }}</div>
+   </div> -->
+</body>
+</html>
